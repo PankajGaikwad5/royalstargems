@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
+import HeroSectionNew from './components/HeroSectionNew'
 import PressSection from './components/PressSection'
 import FeaturedFavourites from './components/FeaturedFavourites'
 import WeddingBanner from './components/WeddingBanner'
@@ -11,17 +11,19 @@ import ScrollExperience from './components/ScrollExperience'
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden bg-black">
       <ScrollExperience />
       <Navbar />
-      <HeroSection />
-      <PressSection />
-      <FeaturedFavourites />
-      <WeddingBanner />
-      <CollectionsSection />
-      <TestimonialsSection />
-      <Newsletter />
-      <Footer />
+      <div id="page-content" className="overflow-x-hidden will-change-transform">
+        <HeroSectionNew />
+        <PressSection />
+        <FeaturedFavourites />
+        <WeddingBanner />
+        <CollectionsSection />
+        <TestimonialsSection />
+        <Newsletter />
+        <Footer />
+      </div>
     </main>
   )
 }

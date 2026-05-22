@@ -70,15 +70,14 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} className="relative w-full h-screen min-h-[540px] overflow-hidden bg-neutral-950">
       <img
-        src="/herobg4.png"
+        src="/jwl.png"
         alt="Diamond jewelry hero"
-        className="hero-bg absolute -inset-6 h-[112%] w-[112%] object-cover object-center"
+        className="hero-bg absolute -inset-0 h-[112%] w-[112%] object-cover object-center"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-black/30" />
 
-      <div className="hero-copy absolute bottom-10 left-8 md:bottom-16 md:left-16 max-w-xs md:max-w-md">
+      <div className=" w-full h-screen flex justify-center items-center flex-col ">
         <span className="hero-kicker mb-5 block font-sans text-[10px] tracking-[0.42em] text-white/70 uppercase">
           Royal Star Gems
         </span>
