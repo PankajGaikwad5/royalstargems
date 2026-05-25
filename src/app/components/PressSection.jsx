@@ -6,16 +6,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const PRESS = [
   {
-    logo: 'VOGUE',
-    quote: '"The extensive selection at Aurus promises an intimate, one-of-a-kind experience—the joy of being a bride, the way you like it..."',
+    quote: 'The extensive selection promises an intimate, one-of-a-kind experience — the joy of being a bride, the way you like it.',
   },
   {
-    logo: 'BRIDES TODAY',
-    quote: '"Opulent emeralds spell luxury for a day function, be it the mehendi ceremony or the wedding. Rich brocade, grand jewellery..."',
+    quote: 'Opulent diamonds spell luxury for a day function, be it the mehendi ceremony or the wedding. Grand jewellery, beautifully crafted.',
   },
   {
-    logo: 'THE VOICE OF FASHION',
-    quote: '"Ahmedabad-based fine jewellery brand Aurus Jewels creates timeless ornaments with an inherent heirloom-like quality...."',
+    quote: 'Royal Star Gems creates timeless ornaments with an inherent heirloom-like quality that you will treasure forever.',
   },
 ]
 
@@ -35,30 +32,29 @@ export default function PressSection() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-cream py-10 md:py-12">
+    <section ref={ref} className="bg-cream py-20 md:py-28">
+      <div className="mx-auto max-w-[1200px] px-8 md:px-16">
+
         {/* Title */}
-        <h2 data-reveal className="ff-title text-center mb-10 md:mb-12">
-          <span className="font-sans text-[22px] md:text-[28px] font-light tracking-wide text-neutral-800">
-            Featured{' '}
-          </span>
-          <span className="font-serif italic text-[28px] md:text-[36px] font-normal text-neutral-900">
-            testimonials
-          </span>
-        </h2>
-      <div className="mx-auto max-w-[1440px] px-6 md:px-14 grid grid-cols-1 md:grid-cols-3">
-        {PRESS.map(({ logo, logoClass, quote }, i) => (
-          <div
-            key={logo}
-            data-reveal
-            className={`press-col flex flex-col items-center justify-center text-center px-6 md:px-10 py-8 md:py-0 ${i > 0 ? 'border-t md:border-t-0 md:border-l border-neutral-300' : ''
-              }`}
-          >
-            {/* <span className={'font-serif text-[12.5px] tracking-[0.18em] font-bold uppercase'}>{logo}</span> */}
-            <p className="mt-4 font-serif text-sm tracking-[0.18em] font-bold uppercase italic max-w-70">
-              {quote}
-            </p>
-          </div>
-        ))}
+        <div className="text-center mb-16 md:mb-20">
+          <span className="font-sans text-[9px] tracking-[0.36em] text-neutral-400 uppercase mb-4 block">What they say</span>
+          <h2>
+            <span className="font-sans text-[20px] md:text-[24px] font-light text-neutral-500">Featured </span>
+            <span className="font-serif italic text-[28px] md:text-[36px] text-neutral-900">testimonials</span>
+          </h2>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-neutral-200">
+          {PRESS.map(({ quote }, i) => (
+            <div key={i} className="press-col flex items-center justify-center px-10 md:px-14 py-12 md:py-10">
+              <p className="font-serif italic text-[17px] md:text-[18px] leading-[1.9] text-neutral-700 text-center">
+                {quote}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   )

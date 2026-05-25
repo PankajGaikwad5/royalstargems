@@ -47,20 +47,21 @@ export default function TestimonialsSection() {
   }, [])
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-white">
-      <div className="mx-auto max-w-[1440px] px-6 md:px-14">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-0 items-start md:items-center">
+    <section ref={ref} className="py-20 md:py-28 bg-white">
+      <div className="mx-auto max-w-[1440px] px-6 md:px-16">
+        <div className="flex flex-col md:flex-row gap-14 md:gap-16 items-start md:items-center">
 
           {/* Left: text */}
-          <div data-reveal className="md:w-[36%] md:pr-14">
-            <h2 className="mb-6">
-              <span className="font-sans text-[22px] md:text-[28px] font-light">Hear from </span>
-              <span className="font-serif italic text-[28px] md:text-[36px]">them!</span>
+          <div data-reveal className="md:w-[38%] md:pr-8">
+            <span className="font-sans text-[9px] tracking-[0.32em] text-neutral-400 uppercase mb-6 block">Customer Stories</span>
+            <h2 className="mb-8">
+              <span className="font-sans text-[20px] md:text-[26px] font-light tracking-widest text-neutral-500 uppercase block">Hear from </span>
+              <span className="font-serif italic text-[30px] md:text-[38px] text-neutral-900">them!</span>
             </h2>
-            <p className="font-sans text-[13.5px] text-neutral-700 leading-[1.85] mb-6 italic">
+            <p className="font-serif text-[15px] md:text-[16px] text-neutral-600 leading-[1.9] mb-6 italic">
               {t.quote}
             </p>
-            <p className="font-sans text-[10px] tracking-[0.22em] text-neutral-500 mb-9">
+            <p className="font-sans text-[10px] tracking-[0.22em] text-neutral-400 mb-10">
               — {t.author}
             </p>
             <button data-magnetic className="font-sans text-[10px] tracking-[0.22em] border border-neutral-900 px-8 py-3.5 hover:bg-neutral-900 hover:text-white transition-all duration-300">
@@ -69,8 +70,8 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Right: image collage */}
-          <div data-reveal className="md:w-[64%]">
-            <div className="flex gap-3 items-stretch">
+          <div data-reveal className="md:w-[62%]">
+            <div className="flex gap-4 md:gap-5 items-stretch">
               {/* Main large image */}
               <div data-parallax-wrap className="flex-1 overflow-hidden">
                 <img
@@ -82,7 +83,7 @@ export default function TestimonialsSection() {
                 />
               </div>
               {/* Two smaller images */}
-              <div className="w-[30%] flex flex-col gap-3">
+              <div className="w-[28%] flex flex-col gap-4 md:gap-5">
                 <div data-parallax-wrap className="overflow-hidden">
                   <img src={t.imgs[1]} alt="" data-parallax="10" className="w-full aspect-[3/4] scale-110 object-cover" />
                 </div>
@@ -93,18 +94,18 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Nav arrows */}
-            <div className="flex gap-3 mt-5 justify-end">
+            <div className="flex gap-3 mt-6 justify-end">
               <button
                 onClick={() => navigate(-1)}
-                className="w-9 h-9 border border-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all"
+                className="w-10 h-10 border border-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300"
               >
-                <ChevronLeft size={15} />
+                <ChevronLeft size={14} />
               </button>
               <button
                 onClick={() => navigate(1)}
-                className="w-9 h-9 border border-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all"
+                className="w-10 h-10 border border-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300"
               >
-                <ChevronRight size={15} />
+                <ChevronRight size={14} />
               </button>
             </div>
           </div>

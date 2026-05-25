@@ -55,19 +55,19 @@ export default function CollectionsSection() {
   }, [])
 
   return (
-    <section ref={ref} className="py-14 md:py-20 bg-white">
-      <div className="mx-auto max-w-[1440px] px-6 md:px-14">
-        <h2 data-reveal className="col-title text-center mb-10 md:mb-12">
-          <span className="font-sans text-[22px] md:text-[28px] font-light tracking-wide text-neutral-800">
+    <section ref={ref} className="py-20 md:py-28 bg-white">
+      <div className="mx-auto max-w-[1440px] px-6 md:px-16">
+        <h2 data-reveal className="col-title text-center mb-14 md:mb-18">
+          <span className="font-sans text-[20px] md:text-[26px] font-light tracking-widest text-neutral-500 uppercase">
             Discover our{' '}
           </span>
-          <span className="font-serif italic text-[28px] md:text-[36px] font-normal text-neutral-900">
+          <span className="font-serif italic text-[30px] md:text-[38px] font-normal text-neutral-900">
             collections
           </span>
         </h2>
 
         <div className="relative">
-          <div className="grid grid-cols-3 gap-3 md:gap-4">
+          <div className="grid grid-cols-3 gap-4 md:gap-6">
             {shown.map(({ id, img, label }, i) => (
               <div
                 key={`${id}-${i}`}
@@ -78,31 +78,33 @@ export default function CollectionsSection() {
                   src={img}
                   alt={label}
                   data-parallax="8"
-                  className="w-full aspect-[3/4] scale-110 object-cover transition-transform duration-700"
+                  className="w-full aspect-[3/4] scale-110 object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/22 transition-colors duration-300" />
-                <span className="absolute bottom-4 right-4 font-sans text-[9px] md:text-[10px] tracking-[0.2em] text-white">
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-black/28 transition-colors duration-400" />
+                <span className="absolute bottom-5 left-5 font-sans text-[9px] md:text-[10px] tracking-[0.22em] text-white/90">
                   {label}
                 </span>
               </div>
             ))}
           </div>
 
-          {/* Arrows outside grid */}
-          <button
-            onClick={() => navigate(-1)}
-            aria-label="Previous collection"
-            className="absolute -left-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-neutral-200 flex items-center justify-center shadow hover:bg-neutral-50 transition z-10"
-          >
-            <ChevronLeft size={16} />
-          </button>
-          <button
-            onClick={() => navigate(1)}
-            aria-label="Next collection"
-            className="absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-neutral-200 flex items-center justify-center shadow hover:bg-neutral-50 transition z-10"
-          >
-            <ChevronRight size={16} />
-          </button>
+          {/* Arrows below grid */}
+          <div className="flex gap-3 mt-8 justify-center">
+            <button
+              onClick={() => navigate(-1)}
+              aria-label="Previous collection"
+              className="w-10 h-10 border border-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300"
+            >
+              <ChevronLeft size={15} />
+            </button>
+            <button
+              onClick={() => navigate(1)}
+              aria-label="Next collection"
+              className="w-10 h-10 border border-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300"
+            >
+              <ChevronRight size={15} />
+            </button>
+          </div>
         </div>
       </div>
     </section>

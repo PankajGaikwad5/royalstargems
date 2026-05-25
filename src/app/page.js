@@ -8,6 +8,7 @@ import TestimonialsSection from './components/TestimonialsSection'
 import Newsletter from './components/NewsLetter'
 import Footer from './components/Footer'
 import ScrollExperience from './components/ScrollExperience'
+import HeroSection from './components/HeroSection'
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <ScrollExperience />
       <Navbar />
       <div id="page-content" className="overflow-x-hidden will-change-transform">
-        <HeroSectionNew />
+        <HeroSection/>
         <PressSection />
         <FeaturedFavourites />
         <WeddingBanner />

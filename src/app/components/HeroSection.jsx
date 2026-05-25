@@ -70,12 +70,12 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} className="relative w-full h-screen min-h-[540px] overflow-hidden bg-neutral-950">
       <img
-        src="/jwl.png"
+        src="/blacknwhitelnd.png"
         alt="Diamond jewelry hero"
         className="hero-bg absolute -inset-0 h-[112%] w-[112%] object-cover object-center"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className=" w-full h-screen flex justify-center items-center flex-col ">
         <span className="hero-kicker mb-5 block font-sans text-[10px] tracking-[0.42em] text-white/70 uppercase">
@@ -83,7 +83,7 @@ export default function HeroSection() {
         </span>
         <p
           ref={textRef}
-          className="font-serif text-white text-[30px] md:text-[46px] font-light leading-[1.05] mb-8"
+          className="font-serif text-white text-[30px] md:text-[46px] font-light leading-[1.05] mb-4 max-w-2xl text-center"
         >
           Diamonds shaped in quiet beauty, crafted to be remembered.
         </p>

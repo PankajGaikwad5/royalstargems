@@ -6,8 +6,7 @@ import { gsap } from 'gsap'
 import Image from 'next/image'
 
 const NAV_LINKS = [
-  'NEW', 'NECKLACES', 'EARRINGS', 'ACCENTS',
-  'EDITS', 'WEDDING', 'SAJJA', 'THE WORLD OF ROYALSTARGEMS',
+  'home', 'testimonials', 'favourites', 'collection',
 ]
 
 export default function Navbar() {
@@ -228,7 +227,7 @@ export default function Navbar() {
           {NAV_LINKS.map((link, index) => (
             <Link
               key={link}
-              href="#"
+              href={`#${link}`}
               ref={element => {
                 linkRefs.current[index] = element
               }}
