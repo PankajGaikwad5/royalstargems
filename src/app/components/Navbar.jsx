@@ -175,8 +175,23 @@ export default function Navbar() {
           }`}
       >
         <div className="relative flex h-[62px] items-center justify-center px-5 md:h-[72px] md:px-10">
-          <Link href="/" className="flex shrink-0 items-center">
-            <Image src="/logo1.png" alt="Logo" width={200} height={200} priority />
+          <Link href="/" className="relative flex shrink-0 items-center">
+            <Image
+              src="/logo1.png"
+              alt="Logo"
+              width={200}
+              height={200}
+              priority
+              className={`transition-opacity duration-700 ease-in-out ${navbarScrolled ? 'opacity-0' : 'opacity-100'}`}
+            />
+            <Image
+              src="/logo1v2.png"
+              alt="Logo"
+              width={200}
+              height={200}
+              priority
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${navbarScrolled ? 'opacity-100' : 'opacity-0'}`}
+            />
           </Link>
 
           <button
