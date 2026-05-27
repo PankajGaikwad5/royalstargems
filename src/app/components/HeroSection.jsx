@@ -78,16 +78,23 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50" />
 
       <div className=" w-full h-screen flex justify-end items-start flex-col p-5 ">
+        <div className='flex w-full justify-between'>
+          <div className='flex flex-col'>
+
         <span className="hero-kicker mb-5 block font-sans text-[10px] tracking-[0.42em] text-white/70 uppercase">
           Royal Star Gems
         </span>
         <p
           ref={textRef}
-          className="font-serif text-white text-[30px] md:text-[46px] font-light leading-[1.05] mb-4 max-w-2xl "
+          className="font-serif text-white text-[30px] md:text-[36px] font-light leading-[1.05] mb-4 max-w-2xl "
         >
           Diamonds shaped in quiet beauty, crafted to be remembered.
         </p>
-        <div className="hero-rule mb-8 h-px w-36 origin-left bg-white/50" />
+        {/* <div className="hero-rule mb-8 h-px w-36 origin-left bg-white/50" /> */}
+        </div>
+
+        <div className='flex items-center'>
+
         <button
           ref={btnRef}
           data-magnetic
@@ -95,6 +102,9 @@ export default function HeroSection() {
         >
           DISCOVER NEW
         </button>
+        </div>
+          </div>
+
       </div>
     </section>
   )
